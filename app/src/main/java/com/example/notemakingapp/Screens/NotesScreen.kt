@@ -23,6 +23,7 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -43,6 +44,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.PopupProperties
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.example.notemakingapp.Models.Notes
 import com.example.notemakingapp.Navigation.NotesNavigationItem
 import com.example.notemakingapp.ui.theme.colorBlack
@@ -143,7 +145,7 @@ fun NotesScreenPreview() {
         notesList = mockNotes,
         dataValue = true,
         notesDBRef = FirebaseFirestore.getInstance().collection("mockNotes"),
-        navHostController = TODO()
+        navHostController = rememberNavController()
     )
 }
 
